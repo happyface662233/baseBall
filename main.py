@@ -40,7 +40,7 @@ for e in a:
 		results.append(res)
 print(len(results))
 
-for i,url in enumerate(results[0:10]): #enumerate is a hard funtion to explain. its a mix of a for each in list loop (for x:xs in js) with the for i in range loops, returning the url and the index
+for i,url in enumerate(results): #enumerate is a hard funtion to explain. its a mix of a for each in list loop (for x:xs in js) with the for i in range loops, returning the url and the index
 	# url = str.encode(url)
 	path = "image"+str(i)+".jpg"#path to save the picture to the disk
 	# urllib.request.urlretrieve(url, b''+path)
