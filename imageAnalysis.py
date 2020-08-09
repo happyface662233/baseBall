@@ -1,13 +1,14 @@
 import cv2 
-ebayImagePath = ''
+ebayImagePath = ''#add your path here
 ebay = cv2.imread(ebayImagePath)
 
-picturePath = ''
+picturePath = ''#add your path here 
 picture = cv2.imread(picturePath)
 
 
 res = cv2.matchTemplate(picture,ebay,cv2.TM_CCOEFF_NORMED)
-thresh = 0.5
+thresh = 0.5 #THIS VALUE NEEDS TWEEKING FOR IT TO WORK WELL
+
 loc = np.where(res>=thresh)
 #print(len(res))
 for pt in zip(*loc[::-1]):
